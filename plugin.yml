@@ -1,0 +1,110 @@
+name: PetCreeper
+version: 1.13.10
+description: CraftBukkit plugin that allows players to get any mob as a pet.
+author: Chris Naude & Mindcraftson
+main: com.cnaude.petcreeper.PetCreeper
+softdepends: [mcMMO,EpicBossRecoded]
+commands:
+    pet:
+        description: Various pet commands
+        usage: |
+         /<command>[id#|all] - Teleport your pet to you
+         /<command>age [id#] [baby|adult|lock|unlock] - Change pet's age (baby, adult, lock, unlock)
+         /<command>color [id#] [color] - Colorize your pet
+         /<command>free [id#|all] - Free your pet
+         /<command>give [id#] [player] - Give your pet to another player
+         /<command>info [id#] - Display information about this pet   
+         /<command>kill [id#|all] - Kill your pet
+         /<command>list - List your pets         
+         /<command>mode [id#] [a|d|p] - Change pet mode (aggressive, defensive, or passive)
+         /<command>name [id#] [name] - Name your pet
+         /<command>reload - Reload configuration
+         /<command>saddle [id#] - Tell your pet to drop its saddle
+         /<command>spawn [creature type] [count] - Spawn a pet
+         /<command>clearInv [id#] - Clear the inventory of your pet
+         /<command>inv [id#] - See the inventory of your pet
+    petfree:
+        description: Free your pet
+        usage: /petfree [id#|all]
+    petkill:
+        description: Kill your pet
+        usage: /petkill [id#|all]
+    petlist:
+        description: List your pet type
+        usage: /petlist
+    petinfo:
+        description: Display information about this pet
+        usage: /petinfo [id#]
+    petname:
+        description: Name your pet
+        usage: /petname [id#] [name]
+    petcolor:
+        description: Colorize your pet
+        usage: /petcolor [id#] [color]
+    petgive:
+        description: Give your pet to another player
+        usage: /petgive [id#] [player]
+    petreload:
+        description: Reload configuration
+        usage: /petreload
+    petmode:
+        description: Change pet mode (aggressive, defensive, or passive)
+        usage: /petmode [id#] [a|d|p]
+    petage:
+        description: Change pet's age (baby, adult, lock, unlock)
+        usage: /petage [id#] [baby|adult|lock|unlock]
+    petspawn:
+        description: Spawn a pet
+        usage: /petspawn [creature type] [count]
+    petsaddle:
+        description: Tell your pet to drop its saddle
+        usage: /petsaddle [id#]
+    petclearinv:
+        description: Clear your pet's inventory
+        usage: /petclearinv [id#]
+    petinv:
+        description: See your pet's inventory
+        usage: /petinv [id#]
+permissions:
+  'petcreeper.*':
+    description: Gives player access to all features of PetCreeper.
+    default: false 
+  petcreeper.reload:
+    description: Allows players to use /petreload command.
+    default: false 
+  petcreeper.pet:
+    description: Allows players to use /pet command.
+    default: false
+  petcreeper.give:
+    description: Allows players to use /petgive command.
+    default: false  
+  petcreeper.kill:
+    description: Allows players to use /petkill command.
+    default: false 
+  petcreeper.free:
+    description: Allows players to use /petfree command.
+    default: true 
+  petcreeper.mode:
+    description: Allows players to use /petmode command.
+    default: false  
+  petcreeper.saddle:
+    description: Allows players to use /petsaddle command.
+    default: false  
+  petcreeper.age:
+    description: Allows players to use /petage command.
+    default: false 
+  petcreeper.name:
+    description: Allows players to use /petname command.
+    default: false
+  petcreeper.control:
+    description: Allows players to control a pet while riding.
+    default: false
+  petcreeper.tame.All:
+    description: Allows players to tame any creature.
+    default: false
+  petcreeper.ride.All:
+    description: Allows players to ride any creature.
+    default: false   
+  petcreeper.spawn.All:
+    description: Allows players to spawn any creature.
+    default: false
